@@ -1,0 +1,29 @@
+package com.matrosov.util;
+
+import lombok.SneakyThrows;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConnectionManager {
+    private static final String URL_KEY = "db.url";
+    private static final String USERNAME_KEY = "db.username";
+    private static final String PASSWORD_KEY = "db.password";
+    private static final String DRIVER_KEY = "db.driver";
+
+    static {
+        loadDriver();
+    }
+
+    @SneakyThrows
+    private static void loadDriver() {
+        Class.forName(DRIVER_KEY);
+    }
+
+    @SneakyThrows
+    public static Connection get() {
+        return DriverManager.getConnection(PropertiesUtil.get(URL_KEY),
+                PropertiesUtil.get(USERNAME_KEY),
+                PropertiesUtil.get(PASSWORD_KEY));
+    }
+}

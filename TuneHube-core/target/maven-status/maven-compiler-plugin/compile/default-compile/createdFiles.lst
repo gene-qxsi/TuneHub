@@ -1,0 +1,13 @@
+com\matrosov\entity\Song$SongBuilder.class
+com\matrosov\entity\User$UserBuilder.class
+com\matrosov\util\ConnectionManager.class
+com\matrosov\dao\UserDao.class
+com\matrosov\entity\Review.class
+com\matrosov\dao\Dao.class
+com\matrosov\entity\Song.class
+com\matrosov\entity\User.class
+com\matrosov\entity\Gender.class
+com\matrosov\entity\Review$ReviewBuilder.class
+com\matrosov\util\PropertiesUtil.class
+com\matrosov\entity\Role.class
+com\matrosov\service\UserService.class
