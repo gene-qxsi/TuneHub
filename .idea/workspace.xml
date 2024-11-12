@@ -10,19 +10,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c698906e-c5a4-4060-a7a5-2b6f080d1570" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/WEB-INF/complete_test.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/assets/images/back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/assets/images/back2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/assets/videos/back1.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/assets/videos/back2.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/mapper/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/mapper/UserDtoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/IndexServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/ViewData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/WEB-INF/welcome.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/assets/images/back3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71c02298-a699-4731-bd79-7b4387a94731.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/71c02298-a699-4731-bd79-7b4387a94731.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71c02298-a699-4731-bd79-7b4387a94731/storage_v2/_src_/database/tunehube.CM62AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/71c02298-a699-4731-bd79-7b4387a94731/storage_v2/_src_/database/tunehube.CM62AA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/service/SongService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/SongService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/src/test/java/com/matrosov/service/SongServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/TuneHube-core-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/TuneHube-core-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/entity/Review$ReviewBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/entity/Review$ReviewBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/entity/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/entity/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/service/SongService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/classes/com/matrosov/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-core/target/test-classes/com/matrosov/service/SongServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/RegistrationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/RegistrationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/WEB-INF/complete_test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/app.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/registration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/WEB-INF/classes/com/matrosov/servlet/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/WEB-INF/classes/com/matrosov/servlet/RegistrationServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/WEB-INF/complete_test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/TuneHube-web-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TuneHube-web/target/classes/com/matrosov/servlet/RegistrationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/classes/com/matrosov/servlet/RegistrationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TuneHube-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/TuneHube-web/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/scripts/create-tables/create-all-tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/create-tables/create-all-tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +62,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -78,11 +107,12 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "A:/TuneHube",
+    "last_opened_file_path": "C:/Users/user/IdeaProjects/first-try-make-project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -127,6 +157,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.matrosov.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginServlet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.matrosov.servlet.LoginServlet" />
+      <module name="TuneHube-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.matrosov.servlet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -333,6 +376,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.LoginServlet" />
       <item itemvalue="Application.ConnectionManager" />
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.SongServiceTest.deleteAll" />
@@ -341,6 +385,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginServlet" />
         <item itemvalue="JUnit.SongServiceTest.findAll" />
         <item itemvalue="JUnit.SongServiceTest.deleteAll" />
         <item itemvalue="Application.ConnectionManager" />
@@ -357,7 +402,9 @@
       <option name="presentableId" value="Default" />
       <updated>1731270436563</updated>
       <workItem from="1731387430722" duration="572000" />
-      <workItem from="1731388017546" duration="15370000" />
+      <workItem from="1731388017546" duration="22787000" />
+      <workItem from="1731411789034" duration="1203000" />
+      <workItem from="1731413019314" duration="8149000" />
     </task>
     <servers />
   </component>
@@ -374,14 +421,32 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/service/UserService.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/UserDao.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/UserDao.java</url>
-          <line>122</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/TuneHube-web/src/main/webapp/registration.jsp</url>
+          <line>97</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/RegistrationServlet.java</url>
+          <line>32</line>
+          <properties class="com.matrosov.servlet.RegistrationServlet" method="doPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/TuneHube-web/src/main/java/com/matrosov/servlet/LoginServlet.java</url>
+          <line>25</line>
+          <properties class="com.matrosov.servlet.LoginServlet" method="doPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

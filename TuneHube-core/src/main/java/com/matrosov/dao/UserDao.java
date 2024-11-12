@@ -49,6 +49,9 @@ public class UserDao implements Dao<Integer, User> {
                 cerated_at = ?
             WHERE id = ?
             """;
+    private static final String SELECT_BY_USERNAME_AND_PASSWORD = SELECT_ALL_SQL + """
+            WHERE username = ? AND password = ?
+            """;
 
     @Override
     @SneakyThrows
@@ -114,7 +117,7 @@ public class UserDao implements Dao<Integer, User> {
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
             generatedKeys.next();
             entity.setId(generatedKeys.getInt("id"));
-            entity = findById(entity.getId()).orElse(null);
+//            entity = findById(entity.getId()).orElse(null); it is a real code, us here
             return entity;
         }
     }
@@ -145,6 +148,21 @@ public class UserDao implements Dao<Integer, User> {
 
     public static UserDao getInstance() {
         return new UserDao();
+    }
+
+    @SneakyThrows
+    public Optional<User> findByUsernameAndPassword(String username, String password) {
+        try (Connection connection = ConnectionManager.get();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_BY_USERNAME_AND_PASSWORD)) {
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            return resultSet.next() ?
+                    Optional.of(build(resultSet))
+                    : Optional.empty();
+        }
     }
 }
 

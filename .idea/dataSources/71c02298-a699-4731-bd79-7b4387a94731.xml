@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.40">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>2137</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2291</IntrospectionStateNumber>
       <ServerVersion>17 rc 1</ServerVersion>
       <StartupTime>1731329054</StartupTime>
       <TimeZones>true ACDT
@@ -885,11 +877,11 @@ false Zulu
 14650||10|C|G
 14650||-9223372036854775808|U|G
 14650||10|U|G</Grants>
-      <IntrospectionStateNumber>2230</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2291</IntrospectionStateNumber>
       <ObjectId>19017</ObjectId>
-      <Relations>sequence|table|19018|19019|1
-sequence|table|19102|19103|1
-sequence|table|19123|19124|1
+      <Relations>sequence|table|19203|19204|1
+sequence|table|19215|19216|1
+sequence|table|19235|19236|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4311,77 +4303,77 @@ sequence|table|19123|19124|1
     <schema id="284" parent="21" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2230</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2291</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="285" parent="284" name="review_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>19123</ObjectId>
-      <StateNumber>2227</StateNumber>
+      <ObjectId>19235</ObjectId>
+      <StateNumber>2290</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="286" parent="284" name="song_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>19102</ObjectId>
-      <StateNumber>2212</StateNumber>
+      <ObjectId>19215</ObjectId>
+      <StateNumber>2285</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="287" parent="284" name="users_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>19018</ObjectId>
-      <StateNumber>2131</StateNumber>
+      <ObjectId>19203</ObjectId>
+      <StateNumber>2281</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="288" parent="284" name="review">
-      <ObjectId>19124</ObjectId>
-      <StateNumber>2227</StateNumber>
+      <ObjectId>19236</ObjectId>
+      <StateNumber>2290</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="289" parent="284" name="song">
-      <ObjectId>19103</ObjectId>
-      <StateNumber>2212</StateNumber>
+      <ObjectId>19216</ObjectId>
+      <StateNumber>2285</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="290" parent="284" name="users">
-      <ObjectId>19019</ObjectId>
-      <StateNumber>2133</StateNumber>
+      <ObjectId>19204</ObjectId>
+      <StateNumber>2285</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <check id="291" parent="288" name="review_rating_check">
       <ColNames>rating</ColNames>
-      <ObjectId>19130</ObjectId>
+      <ObjectId>19242</ObjectId>
       <Predicate>(rating &gt;= 1) AND (rating &lt;= 10)</Predicate>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
     </check>
     <column id="292" parent="288" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;review_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="293" parent="288" name="author">
       <DataType>integer|0s</DataType>
       <Position>2</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="294" parent="288" name="song">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="295" parent="288" name="rating">
       <DataType>integer|0s</DataType>
       <Position>4</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="296" parent="288" name="comment">
@@ -4389,60 +4381,60 @@ sequence|table|19123|19124|1
       <DefaultExpression>&apos;&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="297" parent="288" name="review_date">
       <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <DefaultExpression>now()</DefaultExpression>
       <Position>6</Position>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <foreign-key id="298" parent="288" name="review_author_fkey">
       <ColNames>author</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19135</ObjectId>
+      <ObjectId>19247</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>2227</StateNumber>
-      <RefTableId>19019</RefTableId>
+      <StateNumber>2290</StateNumber>
+      <RefTableId>19204</RefTableId>
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <foreign-key id="299" parent="288" name="review_song_fkey">
       <ColNames>song</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19140</ObjectId>
+      <ObjectId>19252</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>2227</StateNumber>
-      <RefTableId>19103</RefTableId>
+      <StateNumber>2290</StateNumber>
+      <RefTableId>19216</RefTableId>
       <RefTableName>song</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="300" parent="288" name="review_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19133</ObjectId>
+      <ObjectId>19245</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2227</StateNumber>
+      <StateNumber>2290</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="301" parent="288" name="review_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19134</ObjectId>
+      <ObjectId>19246</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2227</StateNumber>
-      <UnderlyingIndexId>19133</UnderlyingIndexId>
+      <StateNumber>2290</StateNumber>
+      <UnderlyingIndexId>19245</UnderlyingIndexId>
     </key>
     <column id="302" parent="289" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;song_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="303" parent="289" name="title">
@@ -4450,159 +4442,193 @@ sequence|table|19123|19124|1
       <DefaultExpression>&apos;unknown&apos;::character varying</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="304" parent="289" name="artist">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="305" parent="289" name="album">
       <DataType>varchar(100)|0s</DataType>
       <DefaultExpression>&apos;unknown&apos;::character varying</DefaultExpression>
       <Position>4</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="306" parent="289" name="genre">
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="307" parent="289" name="release_date">
       <DataType>date|0s</DataType>
-      <DefaultExpression>now()</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="308" parent="289" name="uploaded_by">
       <DataType>integer|0s</DataType>
       <Position>7</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="309" parent="289" name="upload_date">
       <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <DefaultExpression>now()</DefaultExpression>
       <Position>8</Position>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <foreign-key id="310" parent="289" name="song_artist_fkey">
       <ColNames>artist</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19113</ObjectId>
+      <ObjectId>19225</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>2212</StateNumber>
-      <RefTableId>19019</RefTableId>
+      <StateNumber>2285</StateNumber>
+      <RefTableId>19204</RefTableId>
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <foreign-key id="311" parent="289" name="song_uploaded_by_fkey">
       <ColNames>uploaded_by</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19118</ObjectId>
+      <ObjectId>19230</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>2212</StateNumber>
-      <RefTableId>19019</RefTableId>
+      <StateNumber>2285</StateNumber>
+      <RefTableId>19204</RefTableId>
       <RefTableName>users</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="312" parent="289" name="song_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19111</ObjectId>
+      <ObjectId>19223</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2212</StateNumber>
+      <StateNumber>2285</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="313" parent="289" name="song_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19112</ObjectId>
+      <ObjectId>19224</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2212</StateNumber>
-      <UnderlyingIndexId>19111</UnderlyingIndexId>
+      <StateNumber>2285</StateNumber>
+      <UnderlyingIndexId>19223</UnderlyingIndexId>
     </key>
     <column id="314" parent="290" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="315" parent="290" name="username">
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="316" parent="290" name="password">
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="317" parent="290" name="email">
       <DataType>varchar(128)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="318" parent="290" name="birthday">
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="319" parent="290" name="role">
       <DataType>varchar(5)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="320" parent="290" name="gender">
       <DataType>varchar(6)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="321" parent="290" name="created_at">
       <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <DefaultExpression>now()</DefaultExpression>
       <Position>8</Position>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <TypeId>1114</TypeId>
     </column>
     <index id="322" parent="290" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19024</ObjectId>
+      <ObjectId>19209</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2131</StateNumber>
+      <StateNumber>2281</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="323" parent="290" name="users_pkey">
+    <index id="323" parent="290" name="users_username_key">
+      <ColNames>username</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>19025</ObjectId>
+      <ObjectId>19211</ObjectId>
+      <StateNumber>2281</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <index id="324" parent="290" name="users_email_key">
+      <ColNames>email</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19213</ObjectId>
+      <StateNumber>2281</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="325" parent="290" name="users_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19210</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>2131</StateNumber>
-      <UnderlyingIndexId>19024</UnderlyingIndexId>
+      <StateNumber>2281</StateNumber>
+      <UnderlyingIndexId>19209</UnderlyingIndexId>
+    </key>
+    <key id="326" parent="290" name="users_username_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19212</ObjectId>
+      <StateNumber>2281</StateNumber>
+      <UnderlyingIndexId>19211</UnderlyingIndexId>
+    </key>
+    <key id="327" parent="290" name="users_email_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>19214</ObjectId>
+      <StateNumber>2281</StateNumber>
+      <UnderlyingIndexId>19213</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
