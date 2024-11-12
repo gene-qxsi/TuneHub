@@ -15,4 +15,16 @@ public class RegistrationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("WEB-INF/registration.jsp").forward(req, resp);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.getParameter("username");
+        req.getParameter("password");
+        req.getParameter("email");
+        req.getParameter("birthday");
+        req.getParameter("role");
+        req.getParameter("gender");
+        req.getRequestDispatcher("WEB-INF/complete_test.jsp").forward(req, resp);
+    }
 }
