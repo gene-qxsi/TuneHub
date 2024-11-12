@@ -1,12 +1,15 @@
 package com.matrosov.entity;
 
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Value
+@Data
+@Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Song {
     Integer id;

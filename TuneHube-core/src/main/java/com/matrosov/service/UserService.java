@@ -31,4 +31,5 @@ public class UserService {
     public User save(User entity) {
         return userDao.save(entity);
     }
+
 }

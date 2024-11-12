@@ -17,7 +17,7 @@ public class ConnectionManager {
 
     @SneakyThrows
     private static void loadDriver() {
-        Class.forName(DRIVER_KEY);
+        Class.forName(PropertiesUtil.get(DRIVER_KEY));
     }
 
     @SneakyThrows
@@ -26,4 +26,5 @@ public class ConnectionManager {
                 PropertiesUtil.get(USERNAME_KEY),
                 PropertiesUtil.get(PASSWORD_KEY));
     }
+
 }

@@ -20,11 +20,11 @@ CREATE TABLE review(
 
 CREATE TABLE song(
     id SERIAL PRIMARY KEY,
-    title VARCHAR(100) NOT NULL,
-    artist VARCHAR(100) NOT NULL,
-    album VARCHAR(100),
-    genre VARCHAR(50),
-    release_date DATE,
+    title VARCHAR(100) NOT NULL DEFAULT 'unknown',
+    artist INTEGER REFERENCES users,
+    album VARCHAR(100) DEFAULT 'unknown',
+    genre VARCHAR(50) NOT NULL,
+    release_date DATE DEFAULT now(),
     uploaded_by INTEGER REFERENCES users,
     upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )

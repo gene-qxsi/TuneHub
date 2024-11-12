@@ -1,11 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://jakarta.apache.org/taglibs/standard" prefix="c" %
-
+<%--
+  Created by IntelliJ IDEA.
+  User: user
+  Date: 12.11.2024
+  Time: 8:13
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
-    <head>
-        <title>Music Share Platform</title>
-    </head>
-    <body>
-    <h1>привет, тут по факту будет главная страница</h1>
-    </body>
+<head>
+    <title>TuneHube.web</title>
+</head>
+<body>
+hiii
+</body>
 </html>

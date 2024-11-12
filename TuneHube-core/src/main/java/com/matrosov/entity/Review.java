@@ -1,15 +1,18 @@
 package com.matrosov.entity;
 
-import lombok.Builder;
-import lombok.Value;
+import lombok.*;
+import lombok.experimental.Accessors;
 
 import java.time.LocalDateTime;
 
-@Value
+@Data
+@Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Review {
     Integer id;
-    String author;
+    User author;
     Song song;
     Integer rating;
     String comment;

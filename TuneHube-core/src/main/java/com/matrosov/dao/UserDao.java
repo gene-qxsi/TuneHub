@@ -28,7 +28,7 @@ public class UserDao implements Dao<Integer, User> {
             FROM users
             """;
     private static final String SELECT_BY_ID_SQL = SELECT_ALL_SQL + """
-            WHEN id = ?
+            WHERE id = ?
             """;
     private static final String INSERT_SQL = """
             INSERT INTO users (username, password, email, birthday, role, gender, created_at)
@@ -36,16 +36,17 @@ public class UserDao implements Dao<Integer, User> {
             """;
     private static final String DELETE_SQL = """
             DELETE FROM users
-            WHEN id = ?
+            WHERE id = ?
             """;
     private static final String UPDATE_BY_ID_SQL = """
             UPDATE users
-            SET name = ?,
-                birthday = ?,
-                email = ?,
+            SET username = ?,
                 password = ?,
+                email = ?,
+                birthday = ?,
                 role = ?,
-                gender = ?
+                gender = ?,
+                cerated_at = ?
             WHERE id = ?
             """;
 
@@ -95,7 +96,7 @@ public class UserDao implements Dao<Integer, User> {
         try (var connection = ConnectionManager.get();
              var preparedStatement = connection.prepareStatement(UPDATE_BY_ID_SQL)) {
             prepareStatementToUpsert(preparedStatement, entity);
-            preparedStatement.setObject(7, entity.getId());
+            preparedStatement.setObject(8, entity.getId());
 
             preparedStatement.executeUpdate();
         }
@@ -113,23 +114,23 @@ public class UserDao implements Dao<Integer, User> {
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
             generatedKeys.next();
             entity.setId(generatedKeys.getInt("id"));
-
+            entity = findById(entity.getId()).orElse(null);
             return entity;
         }
     }
 
     private void prepareStatementToUpsert(PreparedStatement preparedStatement, User entity) throws SQLException {
         preparedStatement.setObject(1, entity.getUsername());
-        preparedStatement.setObject(2, Date.valueOf(entity.getBirthday()));
+        preparedStatement.setObject(2, entity.getPassword());
         preparedStatement.setObject(3, entity.getEmail());
-        preparedStatement.setObject(4, entity.getPassword());
+        preparedStatement.setObject(4, Date.valueOf(entity.getBirthday()));
         preparedStatement.setObject(5, entity.getRole().name());
         preparedStatement.setObject(6, entity.getGender().name());
         preparedStatement.setObject(7, entity.getCreated_at());
     }
 
     @SneakyThrows
-    private static User build(ResultSet resultSet) {
+    private User build(ResultSet resultSet) {
         return User.builder()
                 .id(resultSet.getInt("id"))
                 .email(resultSet.getString("email"))
@@ -140,6 +141,10 @@ public class UserDao implements Dao<Integer, User> {
                 .gender(Gender.valueOf(resultSet.getObject("gender", String.class)))
                 .birthday(resultSet.getObject("birthday", java.sql.Date.class).toLocalDate())
                 .build();
+    }
+
+    public static UserDao getInstance() {
+        return new UserDao();
     }
 }
 

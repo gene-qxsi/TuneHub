@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/ReviewDao.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/SongDao.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/TuneHube-core/src/main/java/com/matrosov/dao/UserDao.java" dialect="GenericSQL" />
+  </component>
+</project>
