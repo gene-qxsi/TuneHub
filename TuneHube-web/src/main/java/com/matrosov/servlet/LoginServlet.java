@@ -1,6 +1,6 @@
 package com.matrosov.servlet;
 
-import com.matrosov.UserService;
+import com.matrosov.service.UserService;
 import com.matrosov.dao.UserDao;
 import com.matrosov.entity.User;
 import jakarta.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.matrosov;
+package com.matrosov.service;
 
 import com.matrosov.entity.Song;
 

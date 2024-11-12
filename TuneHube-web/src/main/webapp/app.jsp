@@ -12,7 +12,7 @@
             height: 100vh;
             overflow: hidden;
         }
-        
+
         table {
             width: 50%;
             border-collapse: collapse;

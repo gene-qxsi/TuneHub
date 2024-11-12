@@ -1,14 +1,15 @@
-package com.matrosov;
+package com.matrosov.service;
 
 import com.matrosov.dao.SongDao;
 import com.matrosov.entity.Song;
+import com.matrosov.service.Service;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
-public class SongService implements Service<Integer, Song>{
+public class SongService implements Service<Integer, Song> {
 
     private final SongDao songDao;
 

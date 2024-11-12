@@ -5,7 +5,7 @@ import com.matrosov.entity.Gender;
 import com.matrosov.entity.Role;
 import com.matrosov.entity.User;
 import com.matrosov.mapper.UserDtoMapper;
-import com.matrosov.UserService;
+import com.matrosov.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
